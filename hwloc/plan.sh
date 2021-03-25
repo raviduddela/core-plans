@@ -1,6 +1,6 @@
 pkg_name=hwloc
 pkg_origin=core
-pkg_major_minor=2.4
+pkg_major_minor=2.0
 pkg_version="${pkg_major_minor}.1"
 pkg_description="Portable Hardware Locality"
 pkg_upstream_url=https://www.open-mpi.org/software/hwloc
