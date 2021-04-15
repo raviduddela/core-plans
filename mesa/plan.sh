@@ -39,6 +39,7 @@ pkg_build_deps=(
   core/libpthread-stubs
   core/llvm
   core/make
+  core/meson
   core/pkg-config
   core/python2
   core/xextproto
@@ -57,11 +58,6 @@ do_prepare() {
     ln -sv "$(pkg_path_for file)/bin/file" /usr/bin/file
     _clean_file=true
   fi
-
-  # https://patchwork.freedesktop.org/patch/214086/
-  patch -p0 < "$PLAN_CONTEXT"/patches/000-llvm7-support.patch
-  # https://patchwork.freedesktop.org/patch/186737/
-  patch -p0 < "$PLAN_CONTEXT"/patches/001-llvm-enable-new-fast-math-flags.patch
 }
 
 do_build() {
